@@ -5,7 +5,7 @@ window.addEventListener("load", function (event) {
     fetch(URL).then(function (response) {
         response.json().then(function (astronauts) {
             let astronautCount = `${astronauts.length}`;
-            astronauts.sort((elementA, elementB) => elementA.hoursInSpace - elementB.hoursInSpace);
+            astronauts.sort((astronautA, astronautB) => astronautA.hoursInSpace - astronautB.hoursInSpace);
             for (let astronaut of astronauts) {
                 let status = astronaut.active ? "active" :
                     "inactive";
